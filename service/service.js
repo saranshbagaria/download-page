@@ -24,7 +24,6 @@ async function download(url) {
             }, pageNumber);
         }
         const notFound =await page.$('body > div > div');
-        console.log(notFound);
 
         working =  await page.$eval('div > div',(element,newContent)=>{
             if(element.innerHTML === 'Not found' ) {
